@@ -41,3 +41,13 @@ body {
     padding-top: 1em;
     font-size: 10pt;
 }
+
+#search {
+    float: right;
+    padding: 0.5em;
+    min-width: 10em;
+    border-radius: 3em;
+    margin: 0.5em 2em;
+    border: none;
+    outline: none;
+}
