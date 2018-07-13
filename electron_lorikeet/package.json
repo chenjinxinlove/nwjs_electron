@@ -1,11 +1,23 @@
 {
   "name": "electron_lorikeet",
   "version": "1.0.0",
-  "description": "",
+  "description": "electron_lorikeet",
   "main": "index.js",
+  "author": "chen",
+  "scripts": {
+    "pack": "build",
+    "dist": "build"
+  },
   "dependencies": {
     "async": "^2.6.1",
     "lunr": "^2.3.0",
     "osenv": "^0.1.5"
+  },
+  "devDependencies": {
+    "electron": "^2.0.4",
+    "electron-builder": "^20.20.4"
+  },
+  "build":{
+    
   }
 }
