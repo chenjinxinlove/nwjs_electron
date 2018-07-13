@@ -63,9 +63,31 @@ function bindDocument (window) {
 }
 
 function bindSearchField(cd) {
-    document.getElementById('search').addEventListener('keyup', cb, false);
+    document.getElementById('search').addEventListener('keyup', cd, false);
+}
+
+function filterResults(results) {
+    const validFilePath = results.map((result) => { return result.ref; });
+    const items = document.getElementsByClassName('itme');
+    for (var i = 0; i < items.length; i++) {
+        let item = items[i];
+        let filePath = item.getElementByTagName('img')[0]
+            .getAttribute('data-filepath');
+        if (validFilePaths.indexOf(filePath) !== -1) {
+            item.style = null
+        } else {
+            item.style = 'display:none';
+        }
+    }
+}
+
+function resetFilter() {
+    const items = document.getElementByClassName('item');
+    for (var i = 0; i < items.length; i++) {
+        items[i].style = null;
+    }
 }
 
 module.exports = {
-    bindDocument, displayFiles, loadDirectory, bindSearchField
+    bindDocument, displayFiles, loadDirectory, bindSearchField, filterResults, resetFilter
 }

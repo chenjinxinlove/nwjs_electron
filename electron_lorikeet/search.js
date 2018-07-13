@@ -20,5 +20,4 @@ function find(query, cb) {
     const results = index.search(query);
     cb(results);
 }
-
-modules.exports = { addToIndex, find, resetIndex }
+module.exports = { addToIndex, find, resetIndex }
